@@ -3,12 +3,17 @@ package ejercicio1;
 public class Empleado {
 	
 	// PROPIEDADES
+	private static int contador = 1000; 
 	private int id;
 	private String nombre;
 	private int edad;
 	
 	// CONSTRUCTOR VACIO
 	public Empleado() {
+	        this.id = contador++;
+	        this.nombre = "sin nombre";
+	        this.edad = 99;
+		
 	}
 	
 	public Empleado(String nombre, int edad) {
@@ -40,6 +45,10 @@ public class Empleado {
 		this.edad = edad;
 	}
 
+	// METODO QUE NOS DEVUELVE EL PROXIMO ID
+    public static int devuelveProximoID() {
+        return contador;
+    }
 	
 
 	

@@ -4,22 +4,22 @@ public class Empleado {
 	
 	// PROPIEDADES
 	private static int contador = 999; 
-	private int id;
+	private final int id;
 	private String nombre;
 	private int edad;
 	
 	// CONSTRUCTOR VACIO
 	public Empleado() {
-		contador++;
-        this.id = contador;
+
+        this.id = tomaId();
         this.nombre = "sin nombre";
         this.edad = 99;
 		
 	}
 	
 	public Empleado(String nombre, int edad) {
-		contador++;
-		this.id = contador;
+
+		this.id = tomaId();
 		this.nombre = nombre;
 		this.edad = edad;
 	}
@@ -33,13 +33,6 @@ public class Empleado {
 	//SETTERS Y GETTERS
 	public int getId() {
 		return id;
-	}
-
-	
-
-
-	public void setId(int id) {
-		this.id = id;
 	}
 
 	public String getNombre() {
@@ -60,9 +53,12 @@ public class Empleado {
 
 	// METODO QUE NOS DEVUELVE EL PROXIMO ID
     public static int devuelveProximoID() {
-        return contador;
+        return contador+1;
     }
 	
+    public static int tomaId() {
+        return ++contador;
+    }
 
 	
 }

@@ -6,7 +6,13 @@ public class Principal {
 
 		Empleado emp1 = new Empleado("Facundo",23);
 		
-		System.out.println(emp1.toString());
+		Empleado emp2 = new Empleado();
+		emp2.setNombre("Juan");
+		emp2.setEdad(38);
+		
+		System.out.println(emp1);
+		System.out.println(emp2);
+		
+		System.out.println("El proximo ID es: " + Empleado.devuelveProximoID());
 	}
-
 }

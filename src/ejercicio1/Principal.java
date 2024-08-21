@@ -10,8 +10,19 @@ public class Principal {
 		emp2.setNombre("Juan");
 		emp2.setEdad(38);
 		
-		System.out.println(emp1);
-		System.out.println(emp2);
+		Empleado emp3 = new Empleado("Rosa", 41);
+		
+        Empleado emp4 = new Empleado();
+        emp4.setNombre("Fabian");
+        emp4.setEdad(45);
+        Empleado emp5 = new Empleado("Cristian", 24);
+
+        System.out.println(emp1);
+        System.out.println(emp2);
+        System.out.println(emp3);
+        System.out.println(emp4);
+        System.out.println(emp5);
+
 		
 		System.out.println("El proximo ID es: " + Empleado.devuelveProximoID());
 	}
